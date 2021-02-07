@@ -40,8 +40,9 @@ class Student
     end
   end
 
-  def self.create
-
+  def self.create(name, grade)
+    student = self.new(name, grade)
+    student.save
   end
 
   def self.new_from_db(row) #=> ['id','name','grade']
